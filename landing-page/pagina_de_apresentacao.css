@@ -1,0 +1,373 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #00001b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+@keyframes up-down{
+
+    from{
+        bottom: 10vw;
+        opacity: 0;
+    
+    }
+
+    to{
+        bottom: 0vw;
+        opacity: 1;
+    }
+}
+
+@keyframes down-up{
+
+    from{
+        top: 10vw;
+        opacity: 0;
+    }
+
+    to{
+        top: 0vw;
+        opacity: 1;
+    }
+}
+
+@keyframes left-right{
+
+    from{
+        right: 10vw;
+        opacity: 0;
+    }
+
+    to{
+        right: 0vw;
+        opacity: 1;
+    }
+}
+
+@keyframes right-left{
+
+    from{
+        left: 10vw;
+        opacity: 0;
+    }
+
+    to{
+        left: 0vw;
+        opacity: 1;
+    }
+}
+
+.backYellow{
+    background: linear-gradient(60deg, rgb(149, 127, 0) 25% , rgb(255, 215, 0) 75%);
+    padding: 0px 5px;
+    margin: 0px -5px;
+}
+
+.backBlue{
+    background-image: linear-gradient(60deg, #001f75 25% , #4a53fe 75%);
+    padding: 0px 5px;
+    margin: 0px -5px;
+}
+
+.center{
+    display: flex;
+    margin: 0px auto;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.title{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: fit-content;
+    font-weight: 900;
+    text-align: center;
+    font-family: Archivo, Sans-serif;
+    font-size: 3.5em;
+    line-height: 1.1;
+    padding: 5px 10px;
+    animation-name: up-down;
+    animation-duration: 1s;
+    position: relative;
+    background-image: linear-gradient(60deg, #001f75 25% , #4a53fe 75%);
+    
+}
+
+.text-little{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: fit-content;
+    font-size: 25px;
+    font-family: Archivo, Sans-serif;
+    font-weight: 800;
+    animation: down-up 1s;
+    position: relative;
+}
+
+@media (max-width: 1000px) {
+    .text-little{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1000px){
+    .text-little{
+        width: 75%;
+    }
+}
+
+@media (min-width: 1400px){
+    .text-little{
+        width: 60%;
+    }
+}
+
+.video{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: rgb(255, 179, 0) 2px solid;
+    box-shadow: 0px 0px 10px 2px rgb(255, 179, 0);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: 1px;
+    position: relative;
+    animation: down-up 1s;
+}
+
+@media (max-width: 650px) {
+    .video{
+        width: 100%;
+        height: 50vh;
+    }
+}
+
+@media (min-width: 650px) {
+    .video{
+        width: 80%;
+        height: 50vh;
+    }
+}
+
+@media (min-width: 1000px){
+    .video{
+        width: 75%;
+        height: 50vh;
+    }
+}
+
+@media (min-width: 1400px){
+    .video{
+        width: 60%;
+        height: 65vh;
+    }
+}
+
+.space{
+    height: 200px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkBuy{
+    display: inline-block;
+}
+
+.button{
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: aliceblue;
+    width: 200px;
+    height: 100px;
+    border: 5px solid gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    animation: button 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 60px;
+}
+
+.buy{
+    
+    
+    color: black;
+}
+
+@keyframes button {
+
+    from{
+
+    }
+
+    to{
+        box-shadow: 0px 0px 50px 10px gold;
+        width: 250px;
+        height: 125px;
+        font-size: 32px;
+        border-radius: 120px;
+    }
+    
+
+}
+
+.title2{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: fit-content;
+    font-weight: 900;
+    text-align: center;
+    font-family: Archivo, Sans-serif;
+    font-size: 2.2em;
+    line-height: 1.1;
+    padding: 5px 10px;
+    animation-name: left-right;
+    animation-duration: 1s;
+    position: relative;
+}
+
+.list{
+    font-size: 1.2em;
+    list-style-position: inside;
+}
+
+li{
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.li1{
+    animation-name: left-right;
+    animation-duration: 1s;
+    position: relative;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-timeline: view();
+    animation-range: cover 5% cover 60%;
+}
+
+.li2{
+    animation-name: left-right;
+    animation-duration: 1s;
+    position: relative;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-timeline: view();
+    animation-range: cover 5% cover 60%;
+}
+
+.li3{
+    animation-name: left-right;
+    animation-duration: 1s;
+    position: relative;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-timeline: view();
+    animation-range: cover 5% cover 60%;
+}
+
+.li4{
+    animation-name: left-right;
+    animation-duration: 1s;
+    position: relative;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-timeline: view();
+    animation-range: cover 5% cover 60%;
+}
+
+.li5{
+    animation-name: left-right;
+    animation-duration: 1s;
+    position: relative;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-timeline: view();
+    animation-range: cover 5% cover 60%;
+}
+
+.authors{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 1000px) {
+    .authors{
+        flex-direction: column;
+    }
+}
+
+.credits{
+    margin-top: 30px;
+}
+
+.title3{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 100%;
+    font-weight: 900;
+    text-align: center;
+    font-family: Archivo, Sans-serif;
+    font-size: 220%;
+    line-height: 1.1;
+    padding: 5px 10px;
+}
+
+.author{
+    margin-left: auto;
+    margin-right: auto;
+    margin: 1% auto;
+}
+
+.authorName{
+    font-size: 25px;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 5% auto;
+}
+
+.authorPhoto{
+    width: 90%;
+    height: 90%;
+    position: relative;
+    animation-name: right-left;
+    animation-duration: 1s;
+    animation-timeline: view();
+    animation-range: cover 0% cover 20%;
+    
+}
+
+.text-little > p{
+    font-size: 22px;
+    text-align: left;
+}
