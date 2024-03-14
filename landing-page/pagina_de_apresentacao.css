@@ -9,10 +9,10 @@ body{
     flex-direction: column;
     background-color: #00001b;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0 2vh;
     color: white;
+    position: relative;
+    
 }
 
 a{
@@ -87,11 +87,30 @@ a{
 
 .center{
     display: flex;
-    margin: 0px auto;
     flex-direction: column;
+    justify-content: center;
     margin-top: 30px;
 }
+
+
+/*Titulos*/
 .title{
+    word-spacing: 0.1px;
+    padding: 5px;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    font-weight: 900;
+    text-align: center;
+    font-family: Archivo, Sans-serif;
+    font-size: 300.4%;
+    line-height: 1.1;
+    animation-name: up-down;
+    animation-duration: 1s;
+    position: relative;
+    background-image: linear-gradient(60deg, #001f75 25% , #4a53fe 75%);
+}
+
+.title2{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -99,24 +118,36 @@ a{
     font-weight: 900;
     text-align: center;
     font-family: Archivo, Sans-serif;
-    font-size: 3.5em;
+    font-size: 180%;
     line-height: 1.1;
-    padding: 5px 10px;
-    animation-name: up-down;
+    padding: 5px 0px;
+    animation-name: down-up;
     animation-duration: 1s;
     position: relative;
-    background-image: linear-gradient(60deg, #001f75 25% , #4a53fe 75%);
-    
 }
 
+.title3{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-weight: 900;
+    text-align: center;
+    font-family: Archivo, Sans-serif;
+    font-size: 220%;
+    line-height: 1.1;
+    padding: 5px 10px;
+}
+/*Titulos fim*/
+
+
+/*textos*/
 .text-little{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     width: fit-content;
-    font-size: 25px;
-    font-family: Archivo, Sans-serif;
-    font-weight: 800;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-weight: 200;
     animation: down-up 1s;
     position: relative;
 }
@@ -138,7 +169,9 @@ a{
         width: 60%;
     }
 }
+/*textos fim*/
 
+/*video*/
 .video{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -155,13 +188,13 @@ a{
 @media (max-width: 650px) {
     .video{
         width: 100%;
-        height: 50vh;
+        height: 35vh;
     }
 }
 
 @media (min-width: 650px) {
     .video{
-        width: 80%;
+        width: 70%;
         height: 50vh;
     }
 }
@@ -179,7 +212,10 @@ a{
         height: 65vh;
     }
 }
+/*video fim*/
 
+
+/*botao*/
 .space{
     height: 200px;
     text-align: center;
@@ -229,30 +265,18 @@ a{
         box-shadow: 0px 0px 50px 10px gold;
         width: 250px;
         height: 125px;
-        font-size: 32px;
+        font-size: 28px;
         border-radius: 120px;
     }
-    
-
 }
+/*botao fim*/
 
-.title2{
+
+/*lista*/
+.list{
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
-    width: fit-content;
-    font-weight: 900;
-    text-align: center;
-    font-family: Archivo, Sans-serif;
-    font-size: 2.2em;
-    line-height: 1.1;
-    padding: 5px 10px;
-    animation-name: left-right;
-    animation-duration: 1s;
-    position: relative;
-}
-
-.list{
+    width: 90%;
     font-size: 1.2em;
     list-style-position: inside;
 }
@@ -311,6 +335,8 @@ li{
     animation-timeline: view();
     animation-range: cover 5% cover 60%;
 }
+/*lista fim*/
+
 
 .authors{
     width: 100%;
@@ -324,50 +350,212 @@ li{
     }
 }
 
-.credits{
-    margin-top: 30px;
-}
-
-.title3{
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    width: 100%;
-    font-weight: 900;
-    text-align: center;
-    font-family: Archivo, Sans-serif;
-    font-size: 220%;
-    line-height: 1.1;
-    padding: 5px 10px;
-}
-
 .author{
     margin-left: auto;
     margin-right: auto;
     margin: 1% auto;
 }
 
-.authorName{
+.authorName1{
     font-size: 25px;
     text-align: center;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
     margin: 5% auto;
+    position: relative;
+    animation-name: left-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: cover 10% cover 40%;
+    opacity: 0;
 }
 
-.authorPhoto{
-    width: 90%;
-    height: 90%;
+.authorName2{
+    font-size: 25px;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 5% auto;
     position: relative;
     animation-name: right-left;
     animation-duration: 1s;
+    animation-fill-mode: forwards;
     animation-timeline: view();
-    animation-range: cover 0% cover 20%;
-    
+    animation-range: cover 10% cover 40%;
+    opacity: 0;
 }
 
-.text-little > p{
-    font-size: 22px;
+.authorPhoto1, .authorPhoto2{
+    width: 90%;
+    height: 90%;
+    filter: drop-shadow(15px 10px 20px #4a53fe);
+    position: relative;
+}
+
+.authorPhoto1{
+    animation-name: left-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: cover 10% cover 40%;
+    opacity: 0;
+}
+
+.authorPhoto2{
+    animation-name: right-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: cover 10% cover 40%;
+    opacity: 0;
+}
+
+.author>.text-little{
+    font-size: 30px;
     text-align: left;
+    animation-name: down-up;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: cover 5% cover 50%;
+    opacity: 0;
+}
+
+@media (max-width: 1000px){
+    .author>.text-little{
+        font-size: 22px;
+    }
+}
+
+.center2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.center2-1{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.center2>.text-little, .center2-1>.text-little{
+    font-size: 150%;
+    line-height: 3vw;
+    position: relative;
+}
+
+.center2>.text-little{
+    text-align: left;
+    animation-name: left-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: cover 10% cover 40%;
+    opacity: 0;
+}
+
+.center2-1>.text-little{
+    text-align: right;
+    animation-name: right-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: cover 10% cover 40%;
+    opacity: 0;
+}
+
+@media (max-width: 1000px){
+    .center2>.text-little, .center2-1>.text-little{
+        font-size: 20px;
+        line-height: 32px;
+        text-align: center;
+    }
+}
+
+.ilustrative-image{
+    width: 50%;
+    position: relative;
+}
+
+.center2>.ilustrative-image{
+    animation-name: right-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: cover 10% cover 40%;
+    opacity: 0;
+}
+
+.center2-1>.ilustrative-image{
+    animation-name: left-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: cover 10% cover 40%;
+    opacity: 0;
+}
+
+@media (max-width: 1000px) {
+    .ilustrative-image{
+        width: 90%;
+    }
+    .center2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .center2-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 30px;
+    }
+}
+
+footer{
+    height: 200px;
+    margin: 0 -2vh;
+    background-color: #002ba3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contato{
+    display: flex;
+    flex-direction: column;
+}
+
+.contato>.text-little{
+    text-align: left;
+    animation-name: none;
+}
+
+.endereco{
+    display: flex;
+    flex-direction: column;
+}
+
+.endereco>.text-little{
+    text-align: left;
+    animation-name: none;
+}
+
+.redes-sociais{
+    display: flex;
+    flex-direction: column;
+}
+
+.redes-sociais>div{
+    text-align: left;
+    animation-name: none;
 }
